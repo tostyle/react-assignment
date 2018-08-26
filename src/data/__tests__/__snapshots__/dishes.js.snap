@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`normalize dishes data getInitialData 1`] = `
+Object {
+  "dishes": Object {
+    "1": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 1,
+      "name": "Chicken Burger",
+      "restaurant": "0",
+    },
+    "10": Object {
+      "availableMeals": Array [
+        "1",
+      ],
+      "id": 10,
+      "name": "Yakitori",
+      "restaurant": "2",
+    },
+    "11": Object {
+      "availableMeals": Array [
+        "1",
+      ],
+      "id": 11,
+      "name": "Nankotsu",
+      "restaurant": "2",
+    },
+    "12": Object {
+      "availableMeals": Array [
+        "1",
+      ],
+      "id": 12,
+      "name": "Piman",
+      "restaurant": "2",
+    },
+    "13": Object {
+      "availableMeals": Array [
+        "0",
+      ],
+      "id": 13,
+      "name": "Vegan Bento",
+      "restaurant": "3",
+    },
+    "14": Object {
+      "availableMeals": Array [
+        "2",
+      ],
+      "id": 14,
+      "name": "Coleslaw Sandwich",
+      "restaurant": "3",
+    },
+    "15": Object {
+      "availableMeals": Array [
+        "2",
+      ],
+      "id": 15,
+      "name": "Grilled Sandwich",
+      "restaurant": "3",
+    },
+    "16": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 16,
+      "name": "Veg. Salad",
+      "restaurant": "3",
+    },
+    "17": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 17,
+      "name": "Fruit Salad",
+      "restaurant": "3",
+    },
+    "18": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 18,
+      "name": "Corn Soup",
+      "restaurant": "3",
+    },
+    "19": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 19,
+      "name": "Tomato Soup",
+      "restaurant": "3",
+    },
+    "2": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 2,
+      "name": "Ham Burger",
+      "restaurant": "0",
+    },
+    "20": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 20,
+      "name": "Minestrone Soup",
+      "restaurant": "3",
+    },
+    "21": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 21,
+      "name": "Pepperoni Pizza",
+      "restaurant": "4",
+    },
+    "22": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 22,
+      "name": "Pepperoni Pizza",
+      "restaurant": "4",
+    },
+    "23": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 23,
+      "name": "Hawaiian Pizza",
+      "restaurant": "4",
+    },
+    "24": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 24,
+      "name": "Seafood Pizza",
+      "restaurant": "4",
+    },
+    "25": Object {
+      "availableMeals": Array [
+        "1",
+      ],
+      "id": 25,
+      "name": "Deep Dish Pizza",
+      "restaurant": "4",
+    },
+    "26": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 26,
+      "name": "Chow Mein",
+      "restaurant": "5",
+    },
+    "27": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 27,
+      "name": "Mapo Tofu",
+      "restaurant": "5",
+    },
+    "28": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 28,
+      "name": "Kung Pao",
+      "restaurant": "5",
+    },
+    "29": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 29,
+      "name": "Wontons",
+      "restaurant": "5",
+    },
+    "3": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 3,
+      "name": "Cheese Burger",
+      "restaurant": "0",
+    },
+    "30": Object {
+      "availableMeals": Array [
+        "2",
+        "0",
+        "1",
+      ],
+      "id": 30,
+      "name": "Garlic Bread",
+      "restaurant": "6",
+    },
+    "31": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 31,
+      "name": "Ravioli",
+      "restaurant": "6",
+    },
+    "32": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 32,
+      "name": "Rigatoni Spaghetti",
+      "restaurant": "6",
+    },
+    "33": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 33,
+      "name": "Fettucine Pasta",
+      "restaurant": "6",
+    },
+    "4": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 4,
+      "name": "Fries",
+      "restaurant": "0",
+    },
+    "5": Object {
+      "availableMeals": Array [
+        "2",
+      ],
+      "id": 5,
+      "name": "Egg Muffin",
+      "restaurant": "0",
+    },
+    "6": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 6,
+      "name": "Burrito",
+      "restaurant": "1",
+    },
+    "7": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 7,
+      "name": "Tacos",
+      "restaurant": "1",
+    },
+    "8": Object {
+      "availableMeals": Array [
+        "0",
+        "1",
+      ],
+      "id": 8,
+      "name": "Quesadilla",
+      "restaurant": "1",
+    },
+    "9": Object {
+      "availableMeals": Array [
+        "1",
+      ],
+      "id": 9,
+      "name": "Steak",
+      "restaurant": "2",
+    },
+  },
+  "meals": Object {
+    "0": Object {
+      "id": 0,
+      "name": "lunch",
+    },
+    "1": Object {
+      "id": 1,
+      "name": "dinner",
+    },
+    "2": Object {
+      "id": 2,
+      "name": "breakfast",
+    },
+  },
+  "restaurants": Object {
+    "0": Object {
+      "id": 0,
+      "name": "Mc Donalds",
+    },
+    "1": Object {
+      "id": 1,
+      "name": "Taco Bell",
+    },
+    "2": Object {
+      "id": 2,
+      "name": "BBQ Hut",
+    },
+    "3": Object {
+      "id": 3,
+      "name": "Vege Deli",
+    },
+    "4": Object {
+      "id": 4,
+      "name": "Pizzeria",
+    },
+    "5": Object {
+      "id": 5,
+      "name": "Panda Express",
+    },
+    "6": Object {
+      "id": 6,
+      "name": "Olive Garden",
+    },
+  },
+}
+`;
+
+exports[`normalize dishes data getMeals 1`] = `
+Object {
+  "0": Object {
+    "id": 0,
+    "name": "lunch",
+  },
+  "1": Object {
+    "id": 1,
+    "name": "dinner",
+  },
+  "2": Object {
+    "id": 2,
+    "name": "breakfast",
+  },
+}
+`;
+
+exports[`normalize dishes data getRestaurants 1`] = `
+Object {
+  "0": Object {
+    "id": 0,
+    "name": "Mc Donalds",
+  },
+  "1": Object {
+    "id": 1,
+    "name": "Taco Bell",
+  },
+  "2": Object {
+    "id": 2,
+    "name": "BBQ Hut",
+  },
+  "3": Object {
+    "id": 3,
+    "name": "Vege Deli",
+  },
+  "4": Object {
+    "id": 4,
+    "name": "Pizzeria",
+  },
+  "5": Object {
+    "id": 5,
+    "name": "Panda Express",
+  },
+  "6": Object {
+    "id": 6,
+    "name": "Olive Garden",
+  },
+}
+`;

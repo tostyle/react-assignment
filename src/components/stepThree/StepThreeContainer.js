@@ -46,7 +46,7 @@ const mapState = state => {
     menuDishes: state.data.dishes,
     dishes: orderedDishes.map(dish => ({
       ...dish,
-      isValid: !!mappingFilteredDish[dish.dishId]
+      isValid: mappingFilteredDish.hasOwnProperty(dish.dishId)
     })),
     numberOfPeople
   }

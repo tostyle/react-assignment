@@ -1,6 +1,63 @@
-import { validateHandlers } from "../StepThreeContainer"
+import { validateHandlers, filterDish } from "../StepThreeContainer"
 
+describe("filterDish", () => {
+  test("filter restaurant", () => {
+    const dishes = {
+      "1": {
+        restaurant: "1",
+        availableMeals: ["1", "2"]
+      },
+      "2": {
+        restaurant: "2",
+        availableMeals: ["1", "2"]
+      },
+      "3": {
+        restaurant: "1",
+        availableMeals: ["1", "2"]
+      }
+    }
+    const filter = {
+      meal: "1",
+      restaurant: "1"
+    }
+    const result = filterDish(dishes, filter)
+    const expectedResult = [{
+      restaurant: "1",
+      availableMeals: ["1", "2"]
+    }, {
+      restaurant: "1",
+      availableMeals: ["1", "2"]
+    }]
+    expect(result).toEqual(expectedResult)
+  })
 
+  test("filter meal", () => {
+    const dishes = {
+      "1": {
+        restaurant: "1",
+        availableMeals: ["1", "2"]
+      },
+      "2": {
+        restaurant: "1",
+        availableMeals: ["1", "3"]
+      },
+      "3": {
+        restaurant: "1",
+        availableMeals: ["1", "2"]
+      }
+    }
+    const filter = {
+      meal: "3",
+      restaurant: "1"
+    }
+    const result = filterDish(dishes, filter)
+    const expectedResult = [{
+      restaurant: "1",
+      availableMeals: ["1", "3"]
+    }]
+    expect(result).toEqual(expectedResult)
+  })
+})
 describe("addFormValidation", () => {
   test("valid form", () => {
     const props = {

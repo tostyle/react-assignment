@@ -21,6 +21,16 @@ import {
 } from "../../redux/modules/order"
 import StepThree from "./StepThree"
 
+const filterDish = (menuDishes, filter) => {
+  const { restaurant, meal } = filter
+  return R.pipe(
+    R.values,
+    R.filter(
+      dish =>
+        dish.restaurant === restaurant && dish.availableMeals.includes(meal)
+    )
+  )(menuDishes)
+}
 const mapState = state => {
   const {
     dishes: orderedDishes,
@@ -29,25 +39,20 @@ const mapState = state => {
     numberOfPeople
   } = state.order
   // @TODOS use reselect library, move this logic to function
-  const filteredDishes = R.pipe(
-    R.values,
-    R.filter(
-      dish =>
-        dish.restaurant === restaurant && dish.availableMeals.includes(meal)
-    )
-  )(state.data.dishes)
+  const filteredDishes = filterDish(state.data.dishes, { restaurant, meal })
   const mappingFilteredDish = filteredDishes.reduce((obj, dish) => {
     obj[dish.id] = true
     return obj
   }, {})
+  const dishes = orderedDishes.map(dish => ({
+    ...dish,
+    isValid: mappingFilteredDish.hasOwnProperty(dish.dishId)
+  }))
   return {
     currentStep: state.step,
-    filteredDishes,
     menuDishes: state.data.dishes,
-    dishes: orderedDishes.map(dish => ({
-      ...dish,
-      isValid: mappingFilteredDish.hasOwnProperty(dish.dishId)
-    })),
+    filteredDishes,
+    dishes,
     numberOfPeople
   }
 }
@@ -178,7 +183,7 @@ const handlers = {
     }
   },
   onClickRemove: ({ removeDish }) => id => () => {
-    if(window.confirm('Delete this Dish ?')) {
+    if (window.confirm("Delete this Dish ?")) {
       removeDish(id)
     }
   },
@@ -201,7 +206,7 @@ const {
   validateEditForm,
   validateSubmitForm
 } = validateHandlers
-export { validateHandlers }
+export { validateHandlers, filterDish }
 export default compose(
   setDisplayName("StepThreeContainer"),
   withRouter,

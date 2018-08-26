@@ -3,6 +3,16 @@ import { connect } from "react-redux"
 import { withRouter } from "react-router-dom"
 import { changeStep } from "../../redux/modules/step"
 
+const handler = (step) => ({
+  onSubmit: ({ isValidForm, changeStep, history }) => e => {
+    e.preventDefault()
+    if (isValidForm()) {
+      changeStep(step)
+      history.push(step)
+    }
+  }
+})
+export { handler }
 export default step =>
   compose(
     setDisplayName("WithOnSubmit"),
@@ -11,13 +21,5 @@ export default step =>
       null,
       { changeStep }
     ),
-    withHandlers({
-      onSubmit: ({ isValidForm, changeStep, history }) => e => {
-        e.preventDefault()
-        if (isValidForm()) {
-          changeStep(step)
-          history.push(step)
-        }
-      }
-    })
+    withHandlers(handler(step))
   )

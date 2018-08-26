@@ -37,7 +37,7 @@ const validation = ({ setError, meal, numberOfPeople }) => () => {
   setError(errors)
   return isValid
 }
-
+export { validation }
 export default compose(
   setDisplayName("StepOneContainer"),
   connect(

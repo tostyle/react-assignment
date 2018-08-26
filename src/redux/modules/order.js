@@ -23,6 +23,9 @@ const order = (
   switch (action.type) {
     case CHANGE_ORDER:
       const { name, value } = action.payload
+      if(!getInitState().hasOwnProperty(name)) {
+        return state
+      }
       return {
         ...state,
         [name]: value
@@ -30,12 +33,20 @@ const order = (
     case ADD_DISH:
       return {
         ...state,
-        dishes: [...state.dishes, action.payload]
+        dishes: [...state.dishes, {
+          id: action.payload.id,
+          dishId: action.payload.dishId,
+          numberOfServing: action.payload.numberOfServing
+        }]
       }
     case EDIT_DISH:
       const edittedDish = state.dishes.map(dish => {
         if (dish.id === action.payload.id) {
-          return action.payload
+          return {
+            id: action.payload.id,
+            dishId: action.payload.dishId,
+            numberOfServing: action.payload.numberOfServing
+          }
         }
         return dish
       })

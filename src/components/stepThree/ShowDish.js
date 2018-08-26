@@ -25,6 +25,7 @@ const ShowDish = ({ name, dish, onClickEdit, onClickRemove }) => {
       <Column>
         <button onClick={onClickRemove}>Delete</button>
       </Column>
+      {!dish.isValid && <Column><span>** You can't choose this dish **</span></Column>}
     </Container>
   )
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "react-emotion"
 import PropTypes from "prop-types"
+import { MIN_DISH, MAX_DISH } from "../../redux/modules/order"
 
 const Container = styled("div")`
   display: flex;
@@ -26,6 +27,8 @@ const EditDish = ({ dish, dishes, onClickEdit, onClickCancel, onChange }) => {
       </Column>
       <Column>
         <input
+          min={MIN_DISH}
+          max={MAX_DISH}
           name={"numberOfServing"}
           type={"number"}
           value={dish.numberOfServing}

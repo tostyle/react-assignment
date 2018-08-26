@@ -27,6 +27,7 @@ const StepThree = ({
   filteredDishes,
   errors
 }) => {
+  console.log(dishes)
   return (
     <Layout>
       <form onSubmit={onClickAdd} className={formStyle}>

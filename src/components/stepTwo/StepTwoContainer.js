@@ -38,7 +38,7 @@ const validation = ({ restaurant, setError }) => () => {
   }
   return isValid
 }
-
+export { validation }
 export default compose(
   setDisplayName("StepTwoContainer"),
   withRouter,

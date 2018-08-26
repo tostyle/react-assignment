@@ -28,6 +28,7 @@ const mapState = state => {
     meal,
     numberOfPeople
   } = state.order
+  // @TODOS use reselect library, move this logic to function
   const filteredDishes = R.pipe(
     R.values,
     R.filter(
@@ -200,6 +201,7 @@ const {
   validateEditForm,
   validateSubmitForm
 } = validateHandlers
+export { validateHandlers }
 export default compose(
   setDisplayName("StepThreeContainer"),
   withRouter,
